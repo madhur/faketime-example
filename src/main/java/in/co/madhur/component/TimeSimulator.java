@@ -11,7 +11,6 @@ import javax.annotation.PreDestroy;
 
 @Slf4j
 @Component
-@ConditionalOnProperty(prefix = "enable", name = "time-manipulation.apis")
 public class TimeSimulator {
 
   private volatile boolean isAdvancementEnabled = false;

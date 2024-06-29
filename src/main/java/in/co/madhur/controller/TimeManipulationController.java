@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
 
 @Slf4j
 @RestController
-@RequestMapping("/time-manipulation")
-@ConditionalOnProperty(prefix = "enable", name = "time-manipulation.apis")
+@RequestMapping("/time")
 public class TimeManipulationController {
 
   @Autowired private TimeSimulator timeSimulator;
