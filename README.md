@@ -38,7 +38,7 @@ curl --location 'localhost:8080/time/getTime'
 }
 ```
 
-### Reset real time
+### Reset back to real time
 ```shell
 curl --location --request POST 'localhost:8080/time/resetTime'
 ```
