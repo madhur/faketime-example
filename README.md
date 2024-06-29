@@ -6,7 +6,7 @@ mvn spring-boot:run -Dspring-boot.run.jvmArguments="-agentpath:./src/main/resour
 ```
 
 
-### Curl scripts to set the time
+### Get current time
 
 ```shell
 curl --location 'localhost:8080/time/getTime'
@@ -17,11 +17,17 @@ curl --location 'localhost:8080/time/getTime'
     "instant": "2024-06-29T10:12:41.973377Z",
     "date": "2024-06-29T10:12:41.973+00:00"
 }
+```
 
+### Set fake time
+```shell
 curl --location --request POST 'localhost:8080/time/setTime?dateTime=2024-08-01T00%3A00%3A00'
 
 Time set
+````
 
+### Get current time
+```shell
 curl --location 'localhost:8080/time/getTime'
 
 {
@@ -30,4 +36,9 @@ curl --location 'localhost:8080/time/getTime'
     "instant": "2024-07-31T18:30:35.085Z",
     "date": "2024-07-31T18:30:35.085+00:00"
 }
+```
+
+### Reset real time
+```shell
+curl --location --request POST 'localhost:8080/time/resetTime'
 ```
